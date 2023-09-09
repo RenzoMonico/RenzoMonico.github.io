@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Guías" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.75 687.26">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        font-family: Abel-Regular, Abel;
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x="87.96" y="257.19" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="272.46" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="287.74" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="303.01" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="318.29" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="333.56" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="348.83" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="364.11" width="15.71" height="9.83"/>
+    <rect class="cls-1" x="87.96" y="379.38" width="15.71" height="9.83"/>
+  </g>
+  <polyline class="cls-3" points=".18 668.31 72.17 596.31 72.17 47.76"/>
+  <text class="cls-2" transform="translate(63.29 683.72)"><tspan x="0" y="0">010 - 01011</tspan></text>
+  <text class="cls-2" transform="translate(63.29 10.2)"><tspan x="0" y="0">010 - 01011</tspan></text>
+</svg>

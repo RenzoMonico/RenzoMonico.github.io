@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Guías" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 597.2 62.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="446.84 .37 125.75 .37 64.33 61.79 -304.08 61.92"/>
+  <polyline class="cls-1" points="178.7 .37 471.01 .37 532.43 61.79 901.28 61.79"/>
+</svg>
