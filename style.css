@@ -342,13 +342,15 @@
         position: relative;
     }
     
+
+
     .cancion{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 10rem;
+        height: 400px;
         width: 200px;
     }
     
@@ -364,7 +366,7 @@
     .frame {
         position: absolute;
         max-width: 180px;
-        top: 60px;
+        top: 120px;
     }
     
     .portada{
@@ -686,7 +688,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        height: 25rem;
 
     }
     
@@ -720,7 +722,7 @@
     
     footer {
         text-align: center;
-        margin-top: 0;
+        height: 12rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
