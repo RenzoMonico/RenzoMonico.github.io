@@ -25,13 +25,13 @@
     <header>
         <div class="container">
             <div class="menu">
-                <button id="abrir" class="abrir-menu"><i class="fa-solid fa-bars" id="menu"></i></button>
+                <button id="abrir" class="abrir-menu" aria-label="abrir" ><i class="fa-solid fa-bars" id="menu"></i></button>
                 <li class="nav-list" id="nav">
-                    <button id="cerrar" class="cerrar-menu"><i class="fa-solid fa-xmark"></i></button>
-                    <ul><a href="">Inicio</a></ul>
-                    <ul><a href="">Radio</a></ul>
-                    <ul><a href="">Nuestros Talentos</a></ul>
-                    <ul><a href="">Metrónomo</a></ul>
+                    <button id="cerrar" class="cerrar-menu" aria-label="cerrar"><i class="fa-solid fa-xmark"></i></button>
+                    <ul><a href="" class="menu-link">Inicio</a></ul>
+                    <ul><a href="#Radio" class="menu-link">Radio</a></ul>
+                    <ul><a href="#Talentos" class="menu-link">Nuestros Talentos</a></ul>
+                    <ul><a href="#Metronomo" class="menu-link">Metrónomo</a></ul>
                     <div class="iconos-nav">
                         <a href="https://twitter.com/fm_orbita?lang=es" target="_blank">
                             <i class="fab fa-twitter" id="sm-icons"></i>
@@ -73,11 +73,10 @@
 
 
     <!-- REPRODUCTOR DE VIDEO  -->
-    <main>
+    <main id="Radio">
         <img src="img/Main/izquierda-02.svg" alt="" class="iz">
         <div class="video">
-            <iframe class="video-frame" src="https://ssh101.com/securelive/index.php?id=OrbitaFM953" scrolling="no" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="852" height="480" frameborder="0" align="middle"></iframe>
-            <img src="img/Main/derecha-02.svg" alt="" class="der">
+            <iframe class="video-frame" src="https://ssh101.com/securelive/index.php?id=OrbitaFM953" scrolling="no" allow="fullscreen autoplay" width="852" height="480" frameborder="0" align="middle"></iframe>   
         </div>
         <div class="svg-overlay"></div> 
         <img src="img/Main/derecha-02.svg" alt="" class="der">
@@ -92,7 +91,7 @@
     </div>
     
     
-    <section class="talentos">
+    <section class="talentos" id="Talentos">
         <h2>NUESTROS TALENTOS</h2>
         
         <div class="talentos-deco"></div>
@@ -148,14 +147,14 @@
 
     <section class="metronomo">
         <h2>METRÓNOMO</h2>
-        <p>Tu brújula musical. 
+        <p> 
             Prepárate para un viaje donde exploramos las  mejores canciones del momento</p>
         <div class="metronomo-deco">
 
         </div>
         <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide" id="Metronomo">
                     <div class="cancion-grid">
                         <div class="cancion">
                             <h3>1</h3>

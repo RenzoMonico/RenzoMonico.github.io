@@ -108,7 +108,7 @@
         align-items: start;
         left: 0;
         top: 0;
-        height: 200vh;
+        height: 100vh;
         background-color: rgb(19, 16, 24);
         z-index: 6;
         padding: 1.8rem;
@@ -191,7 +191,6 @@
 
 
     main {
-        height: auto;
         padding-top: 2rem;
     }
 
@@ -210,7 +209,6 @@
         padding: 0;
         position: relative;
         width: 100%;
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -223,23 +221,14 @@
         padding: 0;
         margin: 0;
         border: none;
-        z-index: 0;
     } 
 
-    /*Marco del reproductor */
-    .svg-overlay {
-        display: none;
-        position: absolute;
-        width: 100vw;
-        background: url("./img/Main/REPRODUCTOR DECO-02.svg") no-repeat center center;
+
     
-        z-index: 3; /* Coloca el marco por delante del reproductor */
-        
+    /* Coloca el reproductor detrás del marco */
+    iframe {
+        z-index: 0;
     }
-        
-    
-
-
     
     .slogan{
         display: flex;
@@ -270,7 +259,7 @@
         width: 100vw;
         height: 94px;
         top: -15px;
-        z-index: 5;
+        z-index: 1;
         pointer-events: none;
     }
     
@@ -324,7 +313,7 @@
     .metronomo {
         padding-top: 50px;
         text-align: center;
-        height: 45rem;
+
         position: relative;
     }
     
@@ -334,7 +323,7 @@
         width: 100vw;
         height: 100px;
         top: 1rem;
-        z-index: 5;
+        z-index: 1;
     }
     
     .line2 {
@@ -349,7 +338,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 30rem;
+
         position: relative;
     }
     
@@ -359,7 +348,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 350px;
+        height: 10rem;
         width: 200px;
     }
     
@@ -375,7 +364,7 @@
     .frame {
         position: absolute;
         max-width: 180px;
-        top: 90px;
+        top: 60px;
     }
     
     .portada{
@@ -390,7 +379,7 @@
     
     footer {
         text-align: center;
-        height: 5rem;
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -425,17 +414,7 @@
     
 
     
-    body::after {
-        content: '';
-        position: fixed; /* Cambiado a fixed para cubrir todo el sitio */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        
-        z-index: -1; /* Asegura que la superposición esté detrás del contenido */
-    }
-    
+
     
     
     header{ 
@@ -529,7 +508,7 @@
 
         background: url("./img/header-deco-tablet-02.svg") no-repeat center center;
         width: 100vw;
-        z-index: 5;
+        z-index: 1;
         pointer-events: none;
     }
     
@@ -565,8 +544,7 @@
         padding: 0;
         margin: 0;
         border: none;
-        z-index: 0;
-
+        z-index: 3;
     } 
 
     /*Marco del reproductor */
@@ -580,28 +558,28 @@
         width: min(85%, 720px); /* Ajusta al ancho del contenedor principal */
         height: 100%; /* Ajusta al alto del contenedor principal */
         background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
-        z-index: 1;
-
-        
+        z-index: 5;
+        pointer-events: none;
     }
         
     
 
-    
     .slogan {
-        height: 190px;
         margin-bottom: 0;
         position: relative;
+        padding-top: 10px;
+        padding-bottom: 30px ;
+        
     }
     .slogan-frame{
         position: absolute;
         background: url("./img/slogan-frame-02.svg") no-repeat center center;
         height: calc(100vw + 640px);
         width: min(80%, 730px);
-        top: 58%;
+        top: 63%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 5;
+        z-index: 1;
     }
 
     .slogan-text{
@@ -614,7 +592,7 @@
     
     .talentos{
         text-align: center;
-        padding-top: 0;
+        padding-top: 30px;
         position: relative;
         height: 580px;
     }
@@ -627,8 +605,8 @@
         position: absolute;
         background: url("./img/Main/main-deco-tablet-02-02.svg") no-repeat center center;
         width: 100vw;
-        top: -2rem;
-        z-index: 5;
+        top: 1rem;
+        z-index: 1;
         height: 100px;
     }
     
@@ -692,7 +670,7 @@
         width: 100vw;
         height: 100px;
         top: -2.5rem;
-        z-index: 5;
+        z-index: 1;
         pointer-events: none;
     }
     
@@ -708,7 +686,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 25rem;
+        
 
     }
     
@@ -742,7 +720,7 @@
     
     footer {
         text-align: center;
-        height: 12rem;
+        margin-top: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -872,7 +850,7 @@
         background: url("./img/header-deco-tablet-02.svg") no-repeat center center;
         width: 100vw;
         height: 200px;
-        z-index: 5;
+        z-index: 1;
         pointer-events: none;
     }
     
@@ -911,8 +889,6 @@
     
     .video {
         flex-wrap: wrap;
-        width: min(100%, 720px);
-        height: min(calc(.5625*80vw), 405px);
         align-items: center;
     }
     
@@ -923,30 +899,29 @@
         padding: 0;
         margin: 0;
         border: none;
-
+        z-index: 5;
     } 
 
     /*Marco del reproductor */
+
     .svg-overlay {
         display: flex;
-
-
         position: absolute;
-        
-        top: 6%;
-        width: min(85%, 795px); /* Ajusta al ancho del contenedor principal */
+        top: 5.5%;
+        width: min(85%, 660px); /* Ajusta al ancho del contenedor principal */
         height: 100%; /* Ajusta al alto del contenedor principal */
         background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
-        z-index: 5;
-        pointer-events: none;
+        z-index: 6;
+
     }
-        
+    
+
     
 
 
     /* Coloca el reproductor detrás del marco */
     iframe {
-        z-index: 2;
+        z-index: 1;
     }
     
     .slogan{
@@ -1159,6 +1134,7 @@
         
         position: relative;
         padding-top: 1rem;
+        margin-bottom: 5rem;
     }
     
 
@@ -1285,6 +1261,7 @@
         position: relative;
         width: 100vw;
         padding-top: 0;
+
         
         
 
@@ -1294,22 +1271,22 @@
     .iz {
         display: block;
         grid-column: 1;
-        max-height: 42vw;
+        max-height: 35vw;
     
     }
     
     .der {
         display: block;
         grid-column: 3;
-        max-height: 42vw;
+        max-height: 35vw;
     
     }
 
     
     .video {
         flex-wrap: wrap;
-        width: min(88%, 1080px);
-        height: min(62%, 720px);
+        height: 86%;
+        width: 80%;
         align-items: center;
     }
     
@@ -1334,7 +1311,6 @@
         height: 100%; /* Ajusta al alto del contenedor principal */
         background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
         z-index: 5;
-        pointer-events: none;
     }
         
     
@@ -1520,7 +1496,9 @@
 }
 
     
-
+h1 {
+        
+}
 
 h2 {
     font-size: clamp(16px, 3vw - 15px, 45px);
