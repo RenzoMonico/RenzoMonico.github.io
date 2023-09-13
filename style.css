@@ -6,6 +6,13 @@
 
 
 
+Body {
+    scroll-behavior: smooth;
+}
+
+.no-text-cursor {
+    caret-color: transparent; /* Hace que el cursor de texto sea transparente */
+}
 
 
 @media screen and (min-width: 0)  {

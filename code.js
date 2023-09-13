@@ -1,6 +1,7 @@
 
 
-/*Menu de barras */
+
+
 
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir")
@@ -9,22 +10,25 @@ const menuLinks = document.querySelectorAll(".menu-link");
 
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
-})
+    cerrar.focus();
+});
 
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
-})
+});
+
 // Cierra el menú cuando se hace clic en un enlace interno
 menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
         nav.classList.remove("visible");
     });
-})
+});
 
+// Cierra el menú cuando se hace clic/touch fuera del cuadro del menú
 document.addEventListener("click", (event) => {
     if (!nav.contains(event.target) && !abrir.contains(event.target)) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del clic
         nav.classList.remove("visible");
-        abrir.focus();
     }
 });
 
