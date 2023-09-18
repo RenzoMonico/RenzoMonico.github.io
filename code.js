@@ -18,20 +18,32 @@ cerrar.addEventListener("click", () => {
 });
 
 // Cierra el menú cuando se hace clic en un enlace interno
+/*
 menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
         nav.classList.remove("visible");
     });
 });
+*/
 
-// Cierra el menú cuando se hace clic/touch fuera del cuadro del menú
+
+menuLinks.forEach((link) => {
+    if (!link.classList.contains("no-cerrar-menu")) {
+        link.addEventListener("click", () => {
+            nav.classList.remove("visible");
+        });
+    }
+});
+
+/*
 document.addEventListener("click", (event) => {
-    if (!nav.contains(event.target) && !abrir.contains(event.target)) {
+    if (!nav.contains(event.target) && !abrir.contains(event.target) && !event.target.classList.contains("menu-link")) {
         event.preventDefault(); // Evita el comportamiento predeterminado del clic
         nav.classList.remove("visible");
     }
 });
 
+*/
 
 
 /*Swiper JS para las cards y metronomo */

@@ -8,10 +8,11 @@
 
 Body {
     scroll-behavior: smooth;
+    
 }
 
 .no-text-cursor {
-    caret-color: transparent; /* Hace que el cursor de texto sea transparente */
+    caret-color: transparent;  /* Hace que el cursor de texto sea transparente */
 }
 
 
@@ -116,8 +117,10 @@ Body {
         left: 0;
         top: 0;
         height: 100vh;
-        background-color: rgb(19, 16, 24);
-        z-index: 6;
+        
+        background-color: rgba(38, 46, 61, 0.7);
+        backdrop-filter: blur(1rem);
+        z-index: 7;
         padding: 1.8rem;
         gap: 0.4rem;
         box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
@@ -157,11 +160,12 @@ Body {
     }
     
     .iconos {
-        display: flex;
         justify-content: space-between;
         gap: 10px;
         display: none;
     }
+
+
     
     #sm_icons:hover {
         color: orange;
@@ -451,7 +455,7 @@ Body {
         width: 5rem;
         margin: 0;
         padding: 0;
-        padding-left: 0 !important;
+        padding-left: 18px;
     }
 
 
@@ -467,45 +471,47 @@ Body {
         justify-content: center;
     }
     
+
+
+    
     .iconos-nav{
-        width: 4rem;
-        color: aliceblue;
         display: none;
-        justify-content: space-between;
     }
 
     #menu:hover {
         color: orange;
         cursor: pointer;
     }
-    
     .iconos {
         width: 5rem;
         height: 30px;
         display: flex;
         align-items: top;
         justify-content: start;
+        z-index: 2;
     }
     
-    #sm_icons:hover {
+    /* Cambia #sm_icons a .sm_icons */
+    .sm_icons:hover {
         color: orange;
         cursor: pointer;
-
     }
     
-    #sm_icons {
+    /* Cambia #sm_icons a .sm_icons */
+    .sm_icons {
         color: aliceblue;
         font-size: 20px;
         display: block;
     }
-
+    
     li a {
-        margin:0;
+        margin: 0;
         padding: 0;
     }
-    a{
-        text-decoration: none; /* Elimina la subrayado del texto del enlace */
-    color: inherit; /* Hereda el color del texto del elemento padre */
+    
+    a {
+        text-decoration: none;
+        color: inherit;
     }
     
     .header-deco {
@@ -541,9 +547,9 @@ Body {
     
     .video {
         flex-wrap: wrap;
-        width: min(80%, 620px);
-        height: min(calc(.5625*80vw), 348px);
-        align-items: center;
+        width: min(80%, 650px);
+        height: min(calc(.5625*80vw), 368px);
+        align-items: center; 
     }
     
     
@@ -553,7 +559,7 @@ Body {
         padding: 0;
         margin: 0;
         border: none;
-        z-index: 3;
+        z-index: 5;
     } 
 
     /*Marco del reproductor */
@@ -567,7 +573,7 @@ Body {
         width: min(85%, 720px); /* Ajusta al ancho del contenedor principal */
         height: 100%; /* Ajusta al alto del contenedor principal */
         background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
-        z-index: 5;
+        z-index: 6;
         pointer-events: none;
     }
         
@@ -1200,7 +1206,8 @@ Body {
         top: 0;
         width: 20vw;
         height: 200vh;
-        background-color: rgb(19, 16, 24);
+        background-color: rgba(38, 46, 61, 0.7);
+        backdrop-filter: blur(1rem);
         z-index: 6;
         padding-left: 4rem;
         gap: 0.4rem;
