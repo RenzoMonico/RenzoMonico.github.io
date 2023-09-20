@@ -6,10 +6,8 @@
 	.st0{display:none;}
 	.st1{fill:none;stroke:#FFFFFF;stroke-width:0.75;stroke-miterlimit:10;}
 </style>
-<rect x="-123.2" y="-161.2" class="st0" width="1095.8" height="481.9"/>
-<g>
-	<polyline class="st1" points="518.7,61.9 269.5,61.9 208.1,0.5 -136.5,0.4 	"/>
-	<polyline class="st1" points="394.4,61.9 677,61.9 738.4,0.5 1047,0.5 	"/>
-</g>
+<rect x="-2.3" y="-134.6" class="st0" width="943.2" height="428.7"/>
+<polyline class="st1" points="473.8,61.9 224.6,61.9 163.2,0.5 -181.4,0.4 "/>
+<polyline class="st1" points="448.3,61.9 730.9,61.9 792.3,0.5 1100.8,0.5 "/>
 <line class="st1" x1="470.3" y1="-259.6" x2="470.3" y2="316.4"/>
 </svg>

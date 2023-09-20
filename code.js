@@ -42,8 +42,9 @@ document.addEventListener("click", (event) => {
         nav.classList.remove("visible");
     }
 });
-
 */
+
+
 
 
 /*Swiper JS para las cards y metronomo */

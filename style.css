@@ -91,6 +91,7 @@ Body {
         display: flex;
         align-items: center;
         margin-right: auto; /* Empuja el elemento a la esquina izquierda */
+        z-index: 10;
     }
     
     .abrir-menu,
@@ -269,7 +270,7 @@ Body {
         background: url("./img/Main/main-deco-02.svg") no-repeat center center;
         width: 100vw;
         height: 94px;
-        top: -15px;
+        top: -28px;
         z-index: 1;
         pointer-events: none;
     }
@@ -417,13 +418,7 @@ Body {
 
 
 @media screen and  (min-width: 605px)  {
-    body{
-        font-family: 'Dela Gothic One', cursive;
-        color: azure;
-        margin: 0;
-        overflow-x: hidden;
-    
-    }
+
     
 
     
@@ -462,15 +457,7 @@ Body {
     
     
     
-    #menu{
-        color: aliceblue;
-        font-size: 25px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
+
 
 
     
@@ -478,10 +465,7 @@ Body {
         display: none;
     }
 
-    #menu:hover {
-        color: orange;
-        cursor: pointer;
-    }
+
     .iconos {
         width: 5rem;
         height: 30px;
@@ -546,7 +530,7 @@ Body {
 
     
     .video {
-        flex-wrap: wrap;
+        
         width: min(80%, 650px);
         height: min(calc(.5625*80vw), 368px);
         align-items: center; 
@@ -618,7 +602,7 @@ Body {
     
     .talentos-deco {
         position: absolute;
-        background: url("./img/Main/main-deco-tablet-02-02.svg") no-repeat center center;
+        background: url("./img/Main/main-deco-mobile--01.svg") no-repeat center center;
         width: 100vw;
         top: 1rem;
         z-index: 1;
@@ -760,54 +744,22 @@ Body {
 
 
 @media screen and  (min-width: 1110px)  {
-    body{
-        font-family: 'Dela Gothic One', cursive;
-        color: azure;
-        margin: 0;
-        overflow-x: hidden;
-    
-    }
+
     
 
     
-    body::after {
-        content: '';
-        position: fixed; /* Cambiado a fixed para cubrir todo el sitio */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1; /* Asegura que la superposición esté detrás del contenido */
-        z-index: -1; /* Asegura que la superposición esté detrás del contenido */
-    }
     
     
-    
-    header{ 
-        
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        height: 5rem;
-        
-        position: relative;
-        
-    }
     
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0  calc(10% - 5.5vw);
-    }
+    
+
+
 
 
     .logo{
         width: 6rem;
-        margin: 0;
-        padding: 0;
-        padding-left: 0 !important;
+        padding-top: 1rem;
     }
 
 
@@ -818,51 +770,25 @@ Body {
         color: aliceblue;
         font-size: 30px;
         height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    
     }
     
-    .iconos-nav{
-        width: 4rem;
-        color: aliceblue;
-        display: none;
-        justify-content: space-between;
-    }
 
-    #menu:hover {
-        color: orange;
-        cursor: pointer;
-    }
-    
-    .iconos {
-        width: 5rem;
-        height: 15px;
-        display: flex;
-        align-items: top;
-        justify-content: start;
-    }
-    
-    #sm_icons:hover {
-        color: orange;
-        cursor: pointer;
 
-    }
+
+    
+ 
+    
+
     
     #sm_icons {
         color: aliceblue;
-        font-size: 20px;
+        font-size: 22px;
         display: block;
     }
     
     .header-deco {
-        align-items: center;
-        justify-content: center;
         bottom: -6rem;
-        position: absolute;
-        display: flex;
-
-        background: url("./img/header-deco-tablet-02.svg") no-repeat center center;
         width: 100vw;
         height: 200px;
         z-index: 1;
@@ -923,7 +849,7 @@ Body {
         display: flex;
         position: absolute;
         top: 5.5%;
-        width: min(85%, 660px); /* Ajusta al ancho del contenedor principal */
+        width: min(85%, 690px); /* Ajusta al ancho del contenedor principal */
         height: 100%; /* Ajusta al alto del contenedor principal */
         background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
         z-index: 6;
@@ -1517,7 +1443,7 @@ Body {
 
 
 h2 {
-    font-size: clamp(16px, 3vw - 15px, 45px);
+    font-size: clamp(14px, 3vw - 10px, 30px);
     padding: 0 15px;
 
 }
