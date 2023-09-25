@@ -44,12 +44,15 @@ Body {
     }
 
     body {
+        background-color: #073a5c;
         font-family: 'Dela Gothic One', cursive;
         color: azure;
         margin: 0;
         overflow-x: hidden
+        
     }
 
+    /*
     body::before {
         left: 0;
         background-image: url(./img/cielo-nocturno-estrellado-azul-blanco.webp);
@@ -65,6 +68,7 @@ Body {
         background: linear-gradient(7.73deg, rgba(0, 18, 55, .922) 10%, rgba(1, 20, 57, .687) 34.74%, rgba(6, 27, 64, .733) 49.13%, rgba(13, 39, 76, .687) 59.77%, rgba(24, 57, 93, .687) 68.55%, rgba(39, 80, 116, .687) 76.19%, rgba(56, 107, 144, .687) 83.04%, rgba(77, 142, 177, .687) 89.3%, rgba(101, 180, 214, .562) 94.92%, rgba(127, 221, 255, .763) 100%);
         mix-blend-mode: multiply
     }
+    */
 
     header {
         position: relative;
