@@ -1,470 +1,404 @@
-/*
-*{
-    background: rgba(207, 198, 204, 0.363); 
+h5,
+p {
+    line-height: 1.5
 }
-*/
-
-
 
 Body {
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth
 }
 
 .no-text-cursor {
-    caret-color: transparent;  /* Hace que el cursor de texto sea transparente */
+    caret-color: transparent
 }
 
+@media screen and (min-width:0) {
 
-@media screen and (min-width: 0)  {
-    body{
+    body::after,
+    body::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        height: 100%
+    }
+
+    #menu,
+    .container,
+    .iconos-nav,
+    .nav-list {
+        display: flex
+    }
+
+    #menu,
+    #sm_icons,
+    .iconos-nav,
+    .nav-list a {
+        color: #f0f8ff
+    }
+
+    .header-deco,
+    .nav-list {
+        left: 0;
+        position: absolute
+    }
+
+    body {
         font-family: 'Dela Gothic One', cursive;
         color: azure;
         margin: 0;
-        overflow-x: hidden;
+        overflow-x: hidden
     }
-    
-
-
-
 
     body::before {
-        content: '';
-        position: fixed; /* Cambiado a fixed para cubrir todo el sitio */
-        top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url(./img/cielo-nocturno-estrellado-azul-blanco.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
         background-attachment: scroll;
-        opacity: 0.7; /* Ajusta el valor de opacidad según lo que desees */
-        z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+        opacity: .7
     }
-    
+
     body::after {
-        content: '';
-        position: fixed; /* Cambiado a fixed para cubrir todo el sitio */
-        top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(7.73deg, rgba(0, 18, 55, 0.922) 10%, rgba(1, 20, 57, 0.687) 34.74%, rgba(6, 27, 64, 0.733) 49.13%, rgba(13, 39, 76, 0.687) 59.77%, rgba(24, 57, 93, 0.687) 68.55%, rgba(39, 80, 116, 0.687) 76.19%, rgba(56, 107, 144, 0.687) 83.04%, rgba(77, 142, 177,0.687) 89.3%, rgba(101, 180, 214, 0.562) 94.92%, rgba(127, 221, 255, 0.763) 100%);; /* Color de superposición con opacidad */
-        mix-blend-mode: multiply;
-        z-index: -1; /* Asegura que la superposición esté detrás del contenido */
+        background: linear-gradient(7.73deg, rgba(0, 18, 55, .922) 10%, rgba(1, 20, 57, .687) 34.74%, rgba(6, 27, 64, .733) 49.13%, rgba(13, 39, 76, .687) 59.77%, rgba(24, 57, 93, .687) 68.55%, rgba(39, 80, 116, .687) 76.19%, rgba(56, 107, 144, .687) 83.04%, rgba(77, 142, 177, .687) 89.3%, rgba(101, 180, 214, .562) 94.92%, rgba(127, 221, 255, .763) 100%);
+        mix-blend-mode: multiply
     }
 
-    /* Barra de navegación */
-    
-    
-    
-    header{ 
-
+    header {
         position: relative;
-        max-width: 100%;
-        
+        max-width: 100%
     }
-    
 
     .container {
-        display: flex;
         align-items: center;
-        padding: 1rem 5vw;
+        padding: 1rem 5vw
     }
 
-    .logo{
+    .logo {
         width: 4rem;
-        margin-left: auto; /* Empuja el elemento a la esquina derecha */
-        margin-right: calc(15% - 22px);
-
+        margin-left: auto;
+        margin-right: calc(15% - 22px)
     }
 
-
-    
-    
-    
-    #menu{
-        color: aliceblue;
+    #menu {
         font-size: 25px;
-        display: flex;
         align-items: center;
-        margin-right: auto; /* Empuja el elemento a la esquina izquierda */
-        z-index: 10;
+        margin-right: auto;
+        z-index: 10
     }
-    
+
+    .cancion,
+    .nav-list {
+        flex-direction: column
+    }
+
     .abrir-menu,
     .cerrar-menu {
         border: none;
         background-color: transparent;
-        color: aliceblue;
+        color: #f0f8ff
     }
 
-    .cerrar-menu{
+    .cerrar-menu {
         font-size: 1.8rem;
-        cursor:pointer;
+        cursor: pointer
     }
-
 
     .nav-list {
         opacity: 0;
         visibility: hidden;
-
-        position: absolute;
-        display: flex;
-        flex-direction: column;
         align-items: start;
-        left: 0;
         top: 0;
         height: 100vh;
-        
-        background-color: rgba(38, 46, 61, 0.7);
+        background-color: rgba(38, 46, 61, .7);
         backdrop-filter: blur(1rem);
         z-index: 7;
         padding: 1.8rem;
-        gap: 0.4rem;
-        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
-        font-family: 'Poppins', sans-serif;;
+        gap: .4rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        font-family: Poppins, sans-serif
     }
 
-
-        .nav-list.visible {
+    .nav-list.visible {
         opacity: 1;
-        visibility: visible;
+        visibility: visible
     }
-
 
     .nav-list a {
-        color: aliceblue;
-        text-decoration: none;
+        text-decoration: none
     }
 
     ul {
-        padding-left: 0;
+        padding-left: 0
     }
 
-    .iconos-nav{
+    .iconos-nav {
         width: 5rem;
-        color: aliceblue;
-        display: flex;
-        justify-content: space-between;
+        justify-content: space-between
     }
 
-    .iconos-nav i{
-        font-size: 1.2rem;
+    .iconos-nav i {
+        font-size: 1.2rem
     }
 
-    #menu:hover {
+    #menu:hover,
+    #sm_icons:hover {
         color: orange;
-        cursor: pointer;
+        cursor: pointer
     }
-    
+
     .iconos {
         justify-content: space-between;
         gap: 10px;
-        display: none;
+        display: none
     }
 
-
-    
-    #sm_icons:hover {
-        color: orange;
-        cursor: pointer;
-
-    }
-    
-    #sm_icons {
-        color: aliceblue;
-        font-size: 20px;
-        display: none;
-    }
-    
-    
-    
-    .header-deco {
+    .header-deco,
+    .video {
         align-items: center;
+        overflow: hidden
+    }
+
+    #sm_icons {
+        font-size: 20px;
+        display: none
+    }
+
+    .header-deco {
         justify-content: center;
         bottom: -1rem;
-        left: 0;
-        position: absolute;
         display: flex;
-
-        background: url("./img/header-deco-mobile-02.svg") no-repeat center center;
+        background: url("./img/header-deco-mobile-02.svg") center center no-repeat;
         width: 100vw;
         height: 50px;
-        z-index: 1;
-        overflow: hidden;
-        
-    }
-    
-    
-    /* reproductor de video */
-
-
-    main {
-        padding-top: 2rem;
+        z-index: 1
     }
 
-
-
-    
-    .iz {
-        display: none;
-    }
-    
-    .der {
-        display: none;
-    }
-    
+    .talentos,
     .video {
-        padding: 0;
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;   
+        position: relative
     }
-    
+
+    .video,
     .video-frame {
         width: 100%;
-        height: calc(.5625*100vw);
-        padding: 0;
-        margin: 0;
-        border: none;
-    } 
-
-
-    
-    /* Coloca el reproductor detrás del marco */
-    iframe {
-        z-index: 0;
+        padding: 0
     }
-    
-    .slogan{
-        display: flex;
+
+    main {
+        padding-top: 2rem
+    }
+
+    .der,
+    .iz {
+        display: none
+    }
+
+    .cancion,
+    .card-grid,
+    .slogan,
+    .video,
+    footer {
+        display: flex
+    }
+
+    .video {
+        justify-content: center
+    }
+
+    .video-frame {
+        height: calc(.5625*100vw);
+        margin: 0;
+        border: none
+    }
+
+    iframe {
+        z-index: 0
+    }
+
+    .slogan {
         align-items: center;
         justify-content: center;
-        margin-bottom: 3rem;
-    }
-    .slogan-text{
-        text-align: start;
-        font-size : clamp(15px, 3vw, 2rem);
+        margin-bottom: 3rem
     }
 
-    
-    /* Nuestros talentos */
-    
-    .talentos{
-        text-align: center;
-        position: relative;
+    .slogan-text {
+        text-align: start;
+        font-size: clamp(15px, 3vw, 2rem)
     }
-    
-    
-    
-    
-    
+
+    .metronomo,
+    .talentos,
+    footer {
+        text-align: center
+    }
+
     .talentos-deco {
         position: absolute;
-        background: url("./img/Main/main-deco-02.svg") no-repeat center center;
+        background: url("./img/Main/main-deco-02.svg") center center no-repeat;
         width: 100vw;
         height: 94px;
         top: -28px;
         z-index: 1;
-        pointer-events: none;
+        pointer-events: none
     }
-    
+
     .line {
         position: absolute;
         top: -60px;
         overflow: hidden;
-        width: 100%;
-    }   
-    
-    
+        width: 100%
+    }
+
     .swiper-button-next,
     .swiper-button-prev,
     .swiper-pagination {
-        color:aliceblue !important;
+        color: #f0f8ff !important
     }
-    
-    
+
     .swiper-wrapper {
-    
         transition-property: transform;
-        transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial);
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
         box-sizing: content-box;
-        overflow: hidden;
+        overflow: hidden
     }
-    
-    
-    .card-grid{
-        display: flex;
+
+    .card-grid {
         justify-content: center;
         grid-gap: 10px;
         justify-items: center;
         align-items: center;
-        height: 25rem;
+        height: 25rem
     }
-
 
     .card {
-        height: 70%;
+        height: 70%
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    /*metronomo(top de canciones) */
-    
+
     .metronomo {
         padding-top: 50px;
-        text-align: center;
-
-        position: relative;
+        position: relative
     }
-    
+
     .metronomo-deco {
         position: absolute;
-        background: url("./img/Main/metronomo-deco-02.svg") no-repeat center center;
+        background: url("./img/Main/metronomo-deco-02.svg") center center no-repeat;
         width: 100vw;
         height: 100px;
         top: 1rem;
-        z-index: 1;
+        z-index: 1
     }
-    
+
     .line2 {
-    width: 1000px;
-    position: absolute;
-    top: -60px;
-    padding-bottom: 50px;
-
-    }
-    
-    .cancion-grid{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-    }
-    
-
-
-    .cancion{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        height: 400px;
-        width: 200px;
-    }
-    
-    .portada img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ajusta la imagen al contenedor y recórtala si es necesario */
-        border-radius: 100%;
-    }
-
-
-
-    .frame {
+        width: 1000px;
         position: absolute;
-        max-width: 180px;
-        top: 120px;
+        top: -60px;
+        padding-bottom: 50px
     }
-    
-    .portada{
-        border-style: solid;
-        border-color: aliceblue;
-        height: 150px;
-        width: 150px;
-        border-radius: 100px;
-    }
-    
-    /* footer */
-    
-    footer {
-        text-align: center;
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
+
+    .cancion-grid,
     .footer-deco {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        position: relative
     }
-    
+
+    .cancion {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 400px;
+        width: 200px
+    }
+
+    .frame,
+    .line3 {
+        position: absolute
+    }
+
+    .portada img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%
+    }
+
+    .frame {
+        max-width: 180px;
+        top: 120px
+    }
+
+    .portada {
+        border-style: solid;
+        border-color: #f0f8ff;
+        height: 150px;
+        width: 150px;
+        border-radius: 100px
+    }
+
+    footer {
+        margin-top: 30px;
+        flex-direction: column;
+        justify-content: center
+    }
 
     .line3 {
         width: 1000px;
+        top: 90px
+    }
+}
+
+@media screen and (min-width:605px) {
+
+    header,
+    main {
+        position: relative
+    }
+
+    .header-deco,
+    .svg-overlay {
         position: absolute;
-        top: 90px;
+        pointer-events: none
+    }
 
-    
-}
-}
+    .metronomo,
+    .talentos,
+    footer {
+        text-align: center
+    }
 
-
-@media screen and  (min-width: 605px)  {
-
-    
-
-    
-
-    
-    
-    header{ 
-        
+    header {
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
-
-        height: 5rem;
-        
-        position: relative;
-        
+        height: 5rem
     }
-    
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0  calc(10% - 5.5vw);
+        padding: 0 calc(10% - 5.5vw)
     }
 
-
-    .logo{
+    .logo {
         width: 5rem;
         margin: 0;
+        padding: 0 0 0 18px
+    }
+
+    .video-frame,
+    li a {
         padding: 0;
-        padding-left: 18px;
+        margin: 0
     }
 
-
-    
-    
-    
-
-
-
-    
-    .iconos-nav{
-        display: none;
+    .iconos-nav {
+        display: none
     }
-
 
     .iconos {
         width: 5rem;
@@ -472,1002 +406,797 @@ Body {
         display: flex;
         align-items: top;
         justify-content: start;
-        z-index: 2;
+        z-index: 2
     }
-    
-    /* Cambia #sm_icons a .sm_icons */
+
+    .header-deco,
+    main {
+        align-items: center;
+        width: 100vw
+    }
+
     .sm_icons:hover {
         color: orange;
-        cursor: pointer;
+        cursor: pointer
     }
-    
-    /* Cambia #sm_icons a .sm_icons */
+
     .sm_icons {
-        color: aliceblue;
+        color: #f0f8ff;
         font-size: 20px;
-        display: block;
+        display: block
     }
-    
-    li a {
-        margin: 0;
-        padding: 0;
+
+    .cancion,
+    .card-grid,
+    .footer-deco,
+    .header-deco,
+    .svg-overlay,
+    footer,
+    main {
+        display: flex
     }
-    
+
     a {
         text-decoration: none;
-        color: inherit;
+        color: inherit
     }
-    
+
     .header-deco {
-        align-items: center;
         justify-content: center;
         bottom: -1rem;
-        position: absolute;
-        display: flex;
-
-        background: url("./img/header-deco-tablet-02.svg") no-repeat center center;
-        width: 100vw;
-        z-index: 1;
-        pointer-events: none;
+        background: url("./img/header-deco-tablet-02.svg") center center no-repeat;
+        z-index: 1
     }
-    
 
-    
-    
-    /* reproductor de video */
     main {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        height: min(400px ,468px);
-        position: relative;
-        width: 100vw;
-        padding-top: 2rem;
-        
-
+        height: min(400px, 468px);
+        padding-top: 2rem
     }
-    
 
-    
     .video {
-        
         width: min(80%, 650px);
         height: min(calc(.5625*80vw), 368px);
-        align-items: center; 
+        align-items: center
     }
-    
-    
+
     .video-frame {
         width: 100%;
         height: 100%;
-        padding: 0;
-        margin: 0;
         border: none;
-        z-index: 5;
-    } 
-
-    /*Marco del reproductor */
-    .svg-overlay {
-        display: flex;
-
-
-        position: absolute;
-        
-        top: 6.5%;
-        width: min(85%, 720px); /* Ajusta al ancho del contenedor principal */
-        height: 100%; /* Ajusta al alto del contenedor principal */
-        background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
-        z-index: 6;
-        pointer-events: none;
+        z-index: 5
     }
-        
-    
+
+    .svg-overlay {
+        top: 6.5%;
+        width: min(85%, 720px);
+        height: 100%;
+        background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") center center no-repeat;
+        z-index: 6
+    }
 
     .slogan {
         margin-bottom: 0;
         position: relative;
         padding-top: 10px;
-        padding-bottom: 30px ;
-        
+        padding-bottom: 30px
     }
-    .slogan-frame{
+
+    .slogan-frame {
         position: absolute;
-        background: url("./img/slogan-frame-02.svg") no-repeat center center;
+        background: url("./img/slogan-frame-02.svg") center center no-repeat;
         height: calc(100vw + 640px);
         width: min(80%, 730px);
         top: 63%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 1;
+        z-index: 1
     }
 
-    .slogan-text{
+    .slogan-text {
         font-size: clamp(15px, 2.5vw, 2rem);
         padding-right: 18%;
-        margin-bottom: 0;
+        margin-bottom: 0
     }
-    
-    /* Nuestros talentos */
-    
-    .talentos{
-        text-align: center;
+
+    .talentos {
         padding-top: 30px;
         position: relative;
-        height: 580px;
+        height: 580px
     }
-    
-    
-    
-    
-    
+
     .talentos-deco {
         position: absolute;
-        background: url("./img/Main/main-deco-mobile--01.svg") no-repeat center center;
+        background: url("./img/Main/main-deco-mobile--01.svg") center center no-repeat;
         width: 100vw;
         top: 1rem;
         z-index: 1;
-        height: 100px;
+        height: 100px
     }
-    
-    
-    .line {
+
+    .line,
+    .line2 {
         width: 1000px;
         position: absolute;
         top: -60px;
-        padding-bottom: 50px;
-    }   
-    
-    
+        padding-bottom: 50px
+    }
+
     .swiper-button-next,
     .swiper-button-prev,
     .swiper-pagination {
-        color:aliceblue !important;
+        color: #f0f8ff !important
     }
-    
-    
+
     .swiper-wrapper {
-    
         transition-property: transform;
-        transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial);
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
         box-sizing: content-box;
-        overflow: hidden;
+        overflow: hidden
     }
-    
-    
-    .card-grid{
-        display: flex;
+
+    .card-grid {
         justify-content: center;
         grid-gap: 10px;
         justify-items: center;
         align-items: center;
-        height: 30rem;
+        height: 30rem
     }
-
 
     .card {
-        height: 70%;
+        height: 70%
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    /*metronomo(top de canciones) */
-    
+
     .metronomo {
-        text-align: center;
         height: 40rem;
-        padding-top: 0;
+        padding-top: 0
     }
-    
+
     .metronomo-deco {
         position: absolute;
-        background: url("./img/Main/metronomo-deco-tablet-02.svg") no-repeat center center;
+        background: url("./img/Main/metronomo-deco-tablet-02.svg") center center no-repeat;
         width: 100vw;
         height: 100px;
         top: -2.5rem;
         z-index: 1;
-        pointer-events: none;
+        pointer-events: none
     }
-    
-    .line2 {
-    width: 1000px;
-    position: absolute;
-    top: -60px;
-    padding-bottom: 50px;
 
-    }
-    
-    .cancion-grid{
+    .cancion-grid {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 25rem;
-
+        height: 25rem
     }
-    
-    .cancion{
-        display: flex;
+
+    .cancion {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
         height: 100%;
         width: 200px;
-        overflow-y: hidden;
+        overflow-y: hidden
     }
-    
+
     .frame {
         position: absolute;
         max-width: 155px;
-        top: 125px;
+        top: 125px
     }
-    
-    .portada{
+
+    .portada {
         border-style: solid;
-        border-color: aliceblue;
+        border-color: #f0f8ff;
         height: 130px;
         width: 130px;
-        border-radius: 100px;
+        border-radius: 100px
     }
-    
-    
-    /* footer */
-    
+
     footer {
-        text-align: center;
         height: 12rem;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center
     }
-    
+
     .footer-deco {
-        display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        position: relative
     }
-    
 
     .line3 {
         width: 1000px;
         position: absolute;
-        top: 90px;
-
-    
-}
+        top: 90px
+    }
 }
 
+@media screen and (min-width:1110px) {
 
-@media screen and  (min-width: 1110px)  {
-
-    
-
-    
-    
-    
-    
-
-    
-
-
-
-
-    .logo{
-        width: 6rem;
-        padding-top: 1rem;
-    }
-
-
-    
-    
-    
-    #menu{
-        color: aliceblue;
-        font-size: 30px;
-        height: 50px;
-    
-    }
-    
-
-
-
-    
- 
-    
-
-    
-    #sm_icons {
-        color: aliceblue;
-        font-size: 22px;
+    .der,
+    .iz {
         display: block;
+        max-height: 500px
     }
-    
+
+    .metronomo,
+    .talentos,
+    footer {
+        text-align: center
+    }
+
+    .logo {
+        width: 6rem;
+        padding-top: 1rem
+    }
+
+    #menu {
+        color: #f0f8ff;
+        font-size: 30px;
+        height: 50px
+    }
+
+    #sm_icons {
+        color: #f0f8ff;
+        font-size: 22px;
+        display: block
+    }
+
     .header-deco {
         bottom: -6rem;
         width: 100vw;
         height: 200px;
         z-index: 1;
-        pointer-events: none;
+        pointer-events: none
     }
-    
 
-    
-    
-    /* reproductor de video */
     main {
         display: grid;
-        grid-template-columns: 1fr 4fr 1fr; 
+        grid-template-columns: 1fr 4fr 1fr;
         justify-content: center;
         justify-items: center;
         height: 60%;
         position: relative;
         width: 100vw;
-        padding-top: 2rem;
-        
-
+        padding-top: 2rem
     }
-    
 
     .iz {
-        display: block;
-        grid-column: 1;
-        max-height: 500px;
-    
-    }
-    
-    .der {
-        display: block;
-        grid-column: 3;
-        max-height: 500px;
-    
+        grid-column: 1
     }
 
-    
+    .der {
+        grid-column: 3
+    }
+
+    .cancion,
+    .card-grid,
+    .footer-deco,
+    .slogan,
+    .svg-overlay,
+    footer {
+        display: flex
+    }
+
     .video {
         flex-wrap: wrap;
-        align-items: center;
+        align-items: center
     }
-    
-    
+
     .video-frame {
         width: 100%;
         height: 100%;
         padding: 0;
         margin: 0;
         border: none;
-        z-index: 5;
-    } 
-
-    /*Marco del reproductor */
+        z-index: 5
+    }
 
     .svg-overlay {
-        display: flex;
         position: absolute;
         top: 5.5%;
-        width: min(85%, 690px); /* Ajusta al ancho del contenedor principal */
-        height: 100%; /* Ajusta al alto del contenedor principal */
-        background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
-        z-index: 6;
-
+        width: min(85%, 690px);
+        height: 100%;
+        background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") center center no-repeat;
+        z-index: 6
     }
-    
 
-    
-
-
-    /* Coloca el reproductor detrás del marco */
     iframe {
-        z-index: 1;
+        z-index: 1
     }
-    
-    .slogan{
-        display: flex;
+
+    .slogan {
         line-height: 1;
         position: relative;
-        height: 150px;
+        height: 150px
     }
 
-    .slogan-frame{
+    .slogan-frame {
         position: absolute;
-        background: url("./img/slogan-frame-02.svg") no-repeat center center;
+        background: url("./img/slogan-frame-02.svg") center center no-repeat;
         height: calc(100vw + 875px);
         width: 65%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 5;
+        z-index: 5
     }
 
-    .slogan-text{
+    .slogan-text {
         font-size: clamp(15px, 2vw, 2rem);
-        padding-right: 18%;
+        padding-right: 18%
     }
 
-    /* Nuestros talentos */
-    
-    .talentos{
-        text-align: center;
+    .talentos {
         padding-top: 0;
         position: relative;
-        height: 700px;
+        height: 700px
     }
-    
-    
-    
-    
-    
+
     .talentos-deco {
         position: absolute;
-        background: url("./img/Main/main-deco-desktop-02.svg") no-repeat center center;
+        background: url("./img/Main/main-deco-desktop-02.svg") center center no-repeat;
         width: 100vw;
         top: -2rem;
-        z-index: 5;
+        z-index: 5
     }
-    
-    
-    .line {
+
+    .line,
+    .line2 {
         width: 1000px;
         position: absolute;
         top: -60px;
-        padding-bottom: 50px;
-    }   
-    
-    
+        padding-bottom: 50px
+    }
+
     .swiper-button-next,
     .swiper-button-prev,
     .swiper-pagination {
-        color:aliceblue !important;
+        color: #f0f8ff !important
     }
-    
-    
+
     .swiper-wrapper {
-    
         transition-property: transform;
-        transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial);
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
         box-sizing: content-box;
-        overflow: hidden;
+        overflow: hidden
     }
-    
-    
-    .card-grid{
-        display: flex;
+
+    .card-grid {
         justify-content: center;
         grid-gap: 10px;
         justify-items: center;
         align-items: center;
-        height: 40rem;
+        height: 40rem
     }
-
 
     .card {
-        height: 70%;
+        height: 70%
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    /*metronomo(top de canciones) */
-    
+
     .metronomo {
-        text-align: center;
         height: 40rem;
-        line-height: 3;
+        line-height: 3
     }
-    
+
     .metronomo-deco {
         position: absolute;
-        background: url("./img/Main/metronomo-deco-tablet-02.svg") no-repeat center center;
+        background: url("./img/Main/metronomo-deco-tablet-02.svg") center center no-repeat;
         width: 100vw;
         top: -2rem;
         z-index: 5;
-        pointer-events: none;
+        pointer-events: none
     }
-    
-    .line2 {
-    width: 1000px;
-    position: absolute;
-    top: -60px;
-    padding-bottom: 50px;
 
-    }
-    
-    .cancion-grid{
+    .cancion-grid {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 30rem;
-
+        height: 30rem
     }
-    
-    .cancion{
-        display: flex;
+
+    .cancion {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: relative;
+        position: relative
     }
-    
+
     .frame {
         position: absolute;
         max-width: 155px;
-        top: 170px;
+        top: 170px
     }
-    
-    .portada{
+
+    .portada {
         border-style: solid;
-        border-color: aliceblue;
+        border-color: #f0f8ff;
         height: 130px;
         width: 130px;
-        border-radius: 100px;
+        border-radius: 100px
     }
-    
-    /* footer */
-    
+
     footer {
-        text-align: center;
         height: 12rem;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center
     }
-    
+
     .footer-deco {
-        display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        position: relative
     }
-    
 
     .line3 {
         width: 1000px;
         position: absolute;
-        top: 90px;
-
-    
-}
+        top: 90px
+    }
 }
 
+@media screen and (min-width:1280px) {
 
-@media screen and  (min-width: 1280px)  {
-    body{
+    #menu,
+    #sm_icons,
+    .iconos-nav {
+        color: #f0f8ff
+    }
+
+    header,
+    main {
+        display: grid;
+        position: relative
+    }
+
+    .header-deco,
+    .nav-list,
+    .svg-overlay {
+        position: absolute
+    }
+
+    .metronomo,
+    .talentos,
+    footer {
+        text-align: center
+    }
+
+    body {
         font-family: 'Dela Gothic One', cursive;
         color: azure;
         margin: 0;
-        overflow-x: hidden;
-    
+        overflow-x: hidden
     }
-    
-
-
 
     body::after {
         content: '';
-        position: fixed; /* Cambiado a fixed para cubrir todo el sitio */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear(7.73deg, rgba(0, 18, 55, 0.781) 10%, rgba(1, 20, 57, 0.687) 34.74%, rgba(6, 27, 64, 0.733) 49.13%, rgba(13, 39, 76, 0.687) 59.77%, rgba(24, 57, 93, 0.687) 68.55%, rgba(39, 80, 116, 0.687) 76.19%, rgba(56, 107, 144, 0.687) 83.04%, rgba(77, 142, 177,0.687) 89.3%, rgba(101, 180, 214, 0.562) 94.92%, rgba(127, 221, 255, 0.95) 100%);; /* Color de superposición con opacidad */
-        z-index: -1; /* Asegura que la superposición esté detrás del contenido */
-        z-index: -1; /* Asegura que la superposición esté detrás del contenido */
+        background: linear(7.73deg, rgba(0, 18, 55, .781) 10%, rgba(1, 20, 57, .687) 34.74%, rgba(6, 27, 64, .733) 49.13%, rgba(13, 39, 76, .687) 59.77%, rgba(24, 57, 93, .687) 68.55%, rgba(39, 80, 116, .687) 76.19%, rgba(56, 107, 144, .687) 83.04%, rgba(77, 142, 177, .687) 89.3%, rgba(101, 180, 214, .562) 94.92%, rgba(127, 221, 255, .95) 100%);
+        z-index: -1
     }
-    
-    
 
-
-    header{ 
-        
-        display: grid;
+    header {
         grid-template-columns: 1fr;
         align-items: center;
-
         height: 5rem;
-        
-        position: relative;
         padding-top: 1rem;
-        margin-bottom: 5rem;
+        margin-bottom: 5rem
     }
-    
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0  calc(10% - 5.5vw);
+        padding: 0 calc(10% - 5.5vw)
     }
 
-
-    .logo{
+    .logo {
         width: 7rem;
         margin: 0;
         padding: 0;
-        padding-left: 0 !important;
+        padding-left: 0 !important
     }
 
-
-    
-    
-    
-    #menu{
-        color: aliceblue;
+    #menu {
         font-size: 32px;
         height: 50px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center
     }
-    
+
+    .cancion,
+    .nav-list {
+        flex-direction: column
+    }
+
     .abrir-menu,
     .cerrar-menu {
         border: none;
         background-color: transparent;
-        color: aliceblue;
+        color: #f0f8ff
     }
 
-    .cerrar-menu{
+    .cerrar-menu {
         font-size: 2.8rem;
-        cursor:pointer;
+        cursor: pointer
     }
-
 
     .nav-list {
         opacity: 0;
         visibility: hidden;
-
-        position: absolute;
         display: flex;
-        flex-direction: column;
         align-items: start;
         left: 0;
         top: 0;
         width: 20vw;
         height: 200vh;
-        background-color: rgba(38, 46, 61, 0.7);
+        background-color: rgba(38, 46, 61, .7);
         backdrop-filter: blur(1rem);
         z-index: 6;
         padding-left: 4rem;
-        gap: 0.4rem;
-
-        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
-        font-family: 'Poppins', sans-serif;;
-        font-size: 1.2rem;
+        gap: .4rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        font-family: Poppins, sans-serif;
+        font-size: 1.2rem
     }
 
-
-    .iconos-nav{
+    .iconos-nav {
         width: 4rem;
-        color: aliceblue;
         display: none;
-        justify-content: space-between;
+        justify-content: space-between
     }
 
-    #menu:hover {
+    #menu:hover,
+    #sm_icons:hover {
         color: orange;
-        cursor: pointer;
+        cursor: pointer
     }
-    
+
     .iconos {
         width: 8%;
         height: 28px;
         display: flex;
         align-items: top;
-        justify-content: start;
+        justify-content: start
     }
-    
-    #sm_icons:hover {
-        color: orange;
-        cursor: pointer;
 
-    }
-    
     #sm_icons {
-        color: aliceblue;
         font-size: 28px;
-        display: block;
+        display: block
     }
-    
+
     .header-deco {
         align-items: center;
         justify-content: center;
         bottom: -7rem;
-        position: absolute;
         display: flex;
-
-        background: url("./img/header-deco-tablet-02.svg") no-repeat center center;
+        background: url("./img/header-deco-tablet-02.svg") center center no-repeat;
         width: 100vw;
         height: 200px;
         z-index: 5;
-        pointer-events: none;
+        pointer-events: none
     }
-    
 
-    
-    
-    /* reproductor de video */
+    .der,
+    .iz {
+        display: block;
+        max-height: 35vw
+    }
+
     main {
-        display: grid;
-        grid-template-columns: 1fr 4fr 1fr; 
+        grid-template-columns: 1fr 4fr 1fr;
         justify-content: center;
         justify-items: center;
         height: 60%;
-        position: relative;
         width: 100vw;
-        padding-top: 0;
-
-        
-        
-
+        padding-top: 0
     }
-    
 
     .iz {
-        display: block;
-        grid-column: 1;
-        max-height: 35vw;
-    
-    }
-    
-    .der {
-        display: block;
-        grid-column: 3;
-        max-height: 35vw;
-    
+        grid-column: 1
     }
 
-    
+    .der {
+        grid-column: 3
+    }
+
+    .cancion,
+    .card-grid,
+    .footer-deco,
+    .slogan,
+    .svg-overlay,
+    footer {
+        display: flex
+    }
+
     .video {
         flex-wrap: wrap;
         height: 86%;
         width: 80%;
         align-items: center;
-        overflow: hidden;
+        overflow: hidden
     }
-    
-    
+
     .video-frame {
-        
         width: 100%;
         height: 100%;
         padding: 0;
         margin: 0;
-        border: none;
-    } 
+        border: none
+    }
 
-    /*Marco del reproductor */
     .svg-overlay {
-        display: flex;
-
-
-        position: absolute;
-        
         top: 3%;
-        width: 64%; /* Ajusta al ancho del contenedor principal */
-        height: 100%; /* Ajusta al alto del contenedor principal */
-        background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") no-repeat center center;
-        z-index: 5;
-    }
-        
-    
-    /* Coloca el reproductor detrás del marco */
-    iframe {
-        z-index: 2;
-    }
-    
-    
-    .slogan{
-        display: flex;
-        line-height: 1;
-        position: relative;
-        
+        width: 64%;
+        height: 100%;
+        background: url("./img/Main/REPRODUCTOR\ DECO-02.svg") center center no-repeat;
+        z-index: 5
     }
 
-    .slogan-frame{
+    iframe {
+        z-index: 2
+    }
+
+    .slogan {
+        line-height: 1;
+        position: relative
+    }
+
+    .slogan-frame {
         position: absolute;
-        background: url("./img/slogan-frame-02.svg") no-repeat center center;
+        background: url("./img/slogan-frame-02.svg") center center no-repeat;
         height: calc(100vw + 875px);
         width: 60%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 5;
-        pointer-events: none;
+        pointer-events: none
     }
 
-    .slogan-text{
+    .slogan-text {
         font-size: clamp(15px, 2vw, 4rem);
         padding-right: 18%;
-        margin-top: 0;
+        margin-top: 0
     }
 
-    /* Nuestros talentos */
-    
-    .talentos{
-        text-align: center;
+    .talentos {
         padding-top: 0;
         position: relative;
         height: 800px;
-        margin-top: 5rem;
+        margin-top: 5rem
     }
-    
-    
-    
-    
-    
+
     .talentos-deco {
         position: absolute;
-        background: url("./img/Main/main-deco-desktop-02.svg") no-repeat center center;
+        background: url("./img/Main/main-deco-desktop-02.svg") center center no-repeat;
         width: 100vw;
         top: -2rem;
-        z-index: 5;
+        z-index: 5
     }
-    
-    
-    .line {
+
+    .line,
+    .line2 {
         width: 1000px;
         position: absolute;
         top: -60px;
-        padding-bottom: 50px;
-    }   
-    
-    
+        padding-bottom: 50px
+    }
+
     .swiper-button-next,
     .swiper-button-prev,
     .swiper-pagination {
-        color:aliceblue !important;
+        color: #f0f8ff !important
     }
-    
-    
+
     .swiper-wrapper {
-    
         transition-property: transform;
-        transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial);
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
         box-sizing: content-box;
-        overflow: hidden;
+        overflow: hidden
     }
-    
-    
-    .card-grid{
-        display: flex;
+
+    .card-grid {
         justify-content: center;
         grid-gap: 10px;
         justify-items: center;
         align-items: center;
-        height: 40rem;
+        height: 40rem
     }
-
 
     .card {
-        height: 70%;
+        height: 70%
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    /*metronomo(top de canciones) */
-    
+
     .metronomo {
-        text-align: center;
         height: 40rem;
-        line-height: 3;
+        line-height: 3
     }
-    
+
     .metronomo-deco {
         position: absolute;
-        background: url("./img/Main/metronomo-deco-tablet-desktop-02.svg") no-repeat center center;
+        background: url("./img/Main/metronomo-deco-tablet-desktop-02.svg") center center no-repeat;
         width: 100vw;
         top: -2rem;
         z-index: 5;
-        pointer-events: none;
+        pointer-events: none
     }
-    
-    .line2 {
-    width: 1000px;
-    position: absolute;
-    top: -60px;
-    padding-bottom: 50px;
 
-    }
-    
-    .cancion-grid{
+    .cancion-grid {
         display: flex;
         align-items: center;
         justify-content: center;
-        height:30rem;
-        
+        height: 30rem
     }
-    
-    .cancion{
-        display: flex;
-        flex-direction: column;
+
+    .cancion {
         align-items: center;
         justify-content: center;
-        position: relative;
+        position: relative
     }
-    
+
     .frame {
         position: absolute;
         max-width: 180px;
-        top: 158px;
+        top: 158px
     }
-    
-    .portada{
+
+    .portada {
         border-style: solid;
-        border-color: aliceblue;
+        border-color: #f0f8ff;
         height: 150px;
         width: 150px;
-        border-radius: 100px;
+        border-radius: 100px
     }
-    
-    /* footer */
-    
+
     footer {
-        text-align: center;
         height: 12rem;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center
     }
-    
+
     .footer-deco {
-        display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        position: relative
     }
-    
 
     .line3 {
         width: 1000px;
         position: absolute;
-        top: 90px;
-
-    
-}
+        top: 90px
+    }
 }
 
-    
-
+h4,
+h5 {
+    font-family: Poppins, sans-serif
+}
 
 h2 {
     font-size: clamp(14px, 3vw - 10px, 30px);
-    padding: 0 15px;
-
+    padding: 0 15px
 }
 
-
-h4{
-    font-family: 'Poppins', sans-serif;
+h4 {
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
-h5{
-    font-family: 'Poppins', sans-serif;
+h5 {
     font-weight: 400;
-    margin: 0;
-    line-height: 1.5;
+    margin: 0
 }
 
-p{
-    font-size: clamp(15px, 12vw +10px , 70px);
-    
-    font-family: 'Poppins';
-    margin: 0 12vw;
-    margin-top: 7vh;
-    line-height: 1.5;
-    text-align: center;
+p {
+    font-size: clamp(15px, 12vw +10px, 70px);
+    font-family: Poppins;
+    margin: 7vh 12vw 0;
+    text-align: center
 }
