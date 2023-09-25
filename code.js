@@ -1,1 +1,7 @@
 const nav = document.querySelector("#nav"), abrir = document.querySelector("#abrir"), cerrar = document.querySelector("#cerrar"), menuLinks = document.querySelectorAll(".menu-link"); abrir.addEventListener("click", () => { nav.classList.add("visible"), cerrar.focus() }), cerrar.addEventListener("click", () => { nav.classList.remove("visible") }), menuLinks.forEach(e => { e.classList.contains("no-cerrar-menu") || e.addEventListener("click", () => { nav.classList.remove("visible") }) }); var swiper = new Swiper(".mySwiper", { cssMode: !0, slidesPerView: 3, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, pagination: { el: ".swiper-pagination", clickable: !0 }, breakpoints: { 0: { slidesPerView: 1 }, 600: { slidesPerView: 2 }, 900: { slidesPerView: 3 }, 1380: { slidesPerView: 4 } } }), swiper2 = new Swiper(".mySwiper2", { cssMode: !0, slidesPerView: 5, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, pagination: { el: ".swiper-pagination", clickable: !0 }, breakpoints: { 0: { slidesPerView: 1 }, 450: { slidesPerView: 2 }, 600: { slidesPerView: 3 }, 900: { slidesPerView: 4 }, 1110: { slidesPerView: 5 }, 1400: { slidesPerView: 6 } } });
+
+// Espera a que la página esté completamente cargada
+window.addEventListener('load', () => {
+    // Oculta el elemento de carga
+    document.querySelector('.loader-wrapper').style.display = 'none';
+});
