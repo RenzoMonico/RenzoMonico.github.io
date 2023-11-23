@@ -350,6 +350,18 @@ Body {
         justify-content: center
     }
 
+    .footer-deco {
+        background: url("./img/Main/metronomo-deco-02.svg") center center no-repeat;
+        width: 100vw;
+        height: 100px;
+        top: 65px;
+        transform: scaleY(-1);
+        z-index: 1;
+        
+    }
+
+
+
     .line3 {
         width: 1000px;
         top: 90px
@@ -553,7 +565,7 @@ Body {
     }
 
     .metronomo {
-        height: 40rem;
+        height: 35rem;
         padding-top: 0
     }
 
@@ -605,9 +617,14 @@ Body {
     }
 
     .footer-deco {
-        align-items: center;
-        justify-content: center;
-        position: relative
+
+        background: url("./img/Main/main-deco-mobile--01.svg") center center no-repeat;
+        width: 100vw;
+        top: 68px;
+        z-index: 1;
+        height: 100px;
+        transform: none;
+        
     }
 
     .line3 {
@@ -829,9 +846,10 @@ Body {
     }
 
     .footer-deco {
-        align-items: center;
-        justify-content: center;
-        position: relative
+        background: url("./img/Main/main-deco-desktop-02.svg") center center no-repeat;
+        width: 100vw;
+        top: 85px;
+        z-index: 5
     }
 
     .line3 {
@@ -1185,7 +1203,7 @@ h5 {
 }
 
 h2 {
-    font-size: clamp(14px, 3vw - 10px, 30px);
+    font-size: clamp(15px, 3vw - 10px, 30px);
     padding: 0 15px
 }
 
