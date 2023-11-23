@@ -41,10 +41,10 @@ Body {
     .nav-list {
         left: 0;
         position: absolute
-    }
+    }   
 
     body {
-        /*background-color: #021a34;*/
+        background-color: #021a34;
         font-family: 'Dela Gothic One', cursive;
         color: azure;
         margin: 0;
@@ -52,7 +52,7 @@ Body {
         
     }
 
-    
+    /*
     body::before {
         left: 0;
         background-image: url(./img/cielo-nocturno-estrellado-azul-blanco.webp);
@@ -69,7 +69,7 @@ Body {
         background: linear-gradient( rgba(2, 26, 52, .7) 100%, rgba(127, 221, 255, .763) 20%);
         mix-blend-mode: multiply;
     }
-    
+    */
 
     header {
         position: relative;
